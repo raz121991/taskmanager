@@ -20,19 +20,19 @@ This is a task management application with a React frontend and a .NET Core back
 This is the backend for the Task Manager application built using .NET Core. Follow the steps below to set up and run the backend on your local machine.
 
 
-1. **Clone the Repository**
+1. **Clone the Repository**:
 
    git clone https://github.com/raz121991/taskmanager.git
    
    navigate to the backend folder:
    cd taskmanager/backend
 
- 3. **Restore Dependencies**
+ 3. **Restore Dependencies**:
 enter the command in cmd:
 dotnet restore
-4. **Configure the Database**
+4. **Configure the Database**:
    go to appsetting.json and make sure to update the Connectionstring  under connectionstrings to have your sql server name properly set there.
-5. **Apply Database Migrations**
+5. **Apply Database Migrations**:
    in cmd type:  dotnet ef database update
    
    Ensure that the Entity Framework Core CLI tools are installed if the command above does not work:
@@ -44,8 +44,8 @@ dotnet restore
 
    ## Client ReactJS
 
-   1. **Navigate to the Frontend Directory**
-   2. **install Dependencies**
+   1. **Navigate to the Frontend Directory**.
+   2. **install Dependencies**:
       npm install
    start the frontend server:
      npm start
