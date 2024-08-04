@@ -84,6 +84,7 @@ const tasksSlice = createSlice({
       .addCase(fetchTasks.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload;
+        toast.error("Failed to fetch tasks from the server");
       })
       .addCase(addTask.fulfilled, (state, action) => {
         state.tasks.push(action.payload);
@@ -91,8 +92,16 @@ const tasksSlice = createSlice({
       })
       .addCase(addTask.rejected, (state, action) => {
         state.status = "failed";
-        state.error = action.payload;
-        toast.error(action.payload);
+        if(action.payload)
+        {
+          state.error = action.payload;
+          toast.error(action.payload);
+        }
+        else
+        {
+          state.error = "Failed to add a new task";
+          toast.error("Failed to add a new task due to server issues");
+        }
       })
       .addCase(updateTask.fulfilled, (state, action) => {
         const index = state.tasks.findIndex(
