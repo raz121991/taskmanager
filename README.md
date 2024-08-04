@@ -22,8 +22,7 @@ This is the backend for the Task Manager application built using .NET Core. Foll
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone https://github.com/your-username/taskmanager.git](https://github.com/raz121991/taskmanager.git
+   git clone https://github.com/raz121991/taskmanager.git
    cd taskmanager/backend
 
  2. **Restore Dependencies**
